@@ -10,6 +10,10 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 
+app.get('/test', (req, res) => {
+  res.send('Test route working ✅');
+});
+
 app.use("/api/auth", authRoutes);
 
 
